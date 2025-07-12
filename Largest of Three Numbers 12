@@ -1,0 +1,23 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+int main() {
+int a, b, c;
+scanf("%d", &a);
+scanf("%d", &b);
+scanf("%d", &c);
+ if (a > b) {
+     if (a > c) {
+        printf("a is largest then b and c");
+        } else {
+            printf("c is largest then a and b");
+        }
+    } else {
+        if (b > c) {
+            printf("b is largest then a and c");
+        } else {
+            printf("c is largest then a and b");
+        }
+    }
+return 0;
+}
