@@ -1,0 +1,25 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+int num,org,rem;
+int result = 0;
+scanf("%d", &num);
+if(num >= 100 && num <= 999) {
+    org = num;
+    while(org!= 0) {
+        rem = org % 10;
+        result += rem* rem * rem;
+        org /= 10;
+    }
+    if(result == num)
+        printf("Yes\n");
+    else
+        printf("No\n");
+} else {
+    printf("No\n");
+}
+return 0;
+}
