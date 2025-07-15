@@ -1,0 +1,20 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+double basic, hra, da, gross;
+scanf("%lf", &basic);
+if(basic < 15000) 
+{
+    hra = 0.15 * basic;
+    da = 0.90 * basic;
+} else {
+    hra = 5000;
+    da = 0.98 * basic;
+}
+gross = basic + hra + da;
+printf("%.2lf\n", gross);
+return 0;
+}
