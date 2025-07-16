@@ -1,0 +1,26 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+int sum_upto(int n)
+{
+if (n == 1)
+    return 1;    
+return n + sum_upto(n - 1);
+}
+
+int main(void)
+{
+int n;
+if (scanf("%d", &n) != 1)        
+    return 0;
+
+if (n < 1 || n > 50)
+{             
+    printf("Enter a Valid Input!!!!!!!!!!!!!!!!!!\n");
+    return 0;
+}
+int total = sum_upto(n);
+printf("The sum of numbers from 1 to %d : %04d\n", n, total);
+return 0;
+}
