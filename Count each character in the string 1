@@ -1,0 +1,26 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() 
+{
+char str[100];
+int count[256] = {0};
+scanf("%s", str);
+for (int i = 0; str[i] != '\0'; i++)
+{
+    count[(unsigned char)str[i]]++;
+    }
+int printed[256] = {0}; 
+for (int i = 0; str[i] != '\0'; i++) 
+{
+    char ch = str[i];
+    if (!printed[(unsigned char)ch]) 
+    {
+        printf("%c   %d\n", ch, count[(unsigned char)ch]);
+        printed[(unsigned char)ch] = 1;
+    }
+}
+return 0;
+}
